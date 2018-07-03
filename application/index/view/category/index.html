@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+<meta name="keywords" content="">
+<title></title>
+<!-- Favicon Icon -->
+<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+<!-- Bootstrap -->
+<link rel="stylesheet" href="__STATIC__/qianduan/css/bootstrap.css">
+<!-- Plugins -->
+<link rel="stylesheet" href="__STATIC__/qianduan/css/core.css">
+<!-- Custom CSS -->
+<link rel="stylesheet" href="__STATIC__/qianduan/css/style.css">
+</head>
+
+<body id="top" class="stickyfooter header-fixed">
+<div class="animsition">
+	<div class="content">
+		<header class="header-wrap no-transparent">
+			<div class="header-container">
+				<div class="container clearfix">
+					<div class="pull-left">
+						<!-- Logo -->
+						<a href="{:url('@user/login/index')}" class="logo clearfix">登录</a>
+						<a href="{:url('@user/authors/add')}" class="logo clearfix">注册</a>
+					</div>
+					<div class="pull-right">
+						<!-- Menu Burger -->
+						<a href="#" class="fullscreen-menu-toggle">
+							<span>Menu</span>
+							<i class="menu-bars">
+								<i></i>
+								<i></i>
+								<i></i>
+							</i>
+						</a>
+					</div>
+
+				</div>
+			</div>
+			<!-- End header-container -->
+		</header>
+		<div id="fullscreen-navigation">
+			<div class="inner-wrap">
+				<nav>
+					<ul class="nav_menu">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="about.html">About US</a></li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<!-- End fullscreen-navigation -->
+		<section class="jarallax" style="background-image: url('__STATIC__/qianduan/img/bg/08.png');">
+			<div class="container">
+				<div class="aligner">
+					<div class="aligner-item page-title">
+						<h1>We Are Minimalist</h1>
+						<p>Creative Digital Agency</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End section -->
+
+		<main>
+			<!-- Count To -->
+			<section class="pt-100 pb45">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="area-heading text-center">
+								<h2 class="area-title">Latest Posts</h2>
+							</div>
+						</div>                                
+					</div>
+					<div class="row">
+						<!-- Blog Single -->
+						{volist name='articles' id='article' key='key'}
+						<div class="col-md-4 col-sm-6 col-xs-12">
+							<div class="blog-wrap blog-wrap-mas">
+								<div class="blog-thumb">
+									<img src="__STATIC__/qianduan/img/blog/{$article.logo}" alt="">
+								</div>
+								<!-- End blog-thumb -->
+								<div class="post-header clearfix">
+									<h2 class="post-title clearfix">
+										<a href="blog_single.html" class="animsition-link">{$article.title}</a>
+									</h2>
+									<ul class="post-meta-sm clearfix">
+										<li>
+											<span class="post-time"><a href="{:url('@index/category/index',['id'=>$article.category_id])}">{$article.category.categoryname}</a></span>
+										</li>
+										<li>
+											<a href="#">{$article.author_id}</a>
+										</li>
+									</ul>
+								</div>
+								<div class="post-content clearfix">
+									{$article.description}
+									<p>{$article.content}</p>
+								</div>
+								<!-- End post-content -->
+							</div>
+						</div>
+						{/volist}
+						<!-- Blog Single -->
+					</div>
+				</div>
+			</section>
+			<!-- Latest Blog Section End -->
+			<!-- Testimonials -->
+			<section class="testimonial-area">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="testimonial-wrap jarallax overlay-dark" style="background-image: url('__STATIC__/img/bg/06.png');">
+							<div class="col-md-8 col-md-offset-2">
+								<div class="testimonial-carousel">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide testimonial-item">
+											<div class="avatar">
+												<img src="__STATIC__/qianduan/img/avatar-primary.png" alt="">
+											</div>
+											<blockquote class="testimonial-content">
+												<i class="fa fa-quote-left" aria-hidden="true"></i>Excellence is an art won by training and habituation. We do not act rightly because we have virtue or excellence, but we rather have those because .
+												<i class="fa fa-quote-right" aria-hidden="true"></i>
+											</blockquote>
+											<h5 class="author-person">Adamy Smith</h5>
+											<span class="testimonial-author">Doe CEO</span>
+										</div>
+										<!-- END TESTIMONIAL-ITEM -->
+										<div class="swiper-slide testimonial-item">
+											<div class="avatar">
+												<img src="__STATIC__/qianduan/img/avatar.png" alt="">
+											</div>
+											<blockquote class="testimonial-content">
+												<i class="fa fa-quote-left" aria-hidden="true"></i>Excellence is an art won by training and habituation. We do not act rightly because we have virtue or excellence, but we rather have those because .
+												<i class="fa fa-quote-right" aria-hidden="true"></i>
+											</blockquote>
+											<h5 class="author-person">Adamy Smith</h5>
+											<span class="testimonial-author">Admin</span>
+										</div>
+										<!-- END TESTIMONIAL-ITEM -->
+									</div>
+								</div>
+								<!-- END TESTIMONIAL-CAROUSEL -->
+								<div class="testimonial-pagination"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- Pricing Table Area -->
+		</main>
+		<a href="#top" class="scroll-top scroll-top-hidden">
+			<i class="fa fa-angle-up"></i>
+		</a>
+		<!-- End scroll-top -->
+	</div>
+	<!-- End content -->
+	<footer>
+		<div class="footer">
+			<div class="container">
+				<div class="text-center">
+					<!-- Footer Logo Text -->
+					<a href="index.html" class="logo clearfix">Minidark</a>
+					<div class="footer-socials">
+						<a href="#" data-toggle="tooltip" data-placement="top" title="facebook">
+							<i class="fa fa-fw fa-facebook"></i>
+						</a>
+						<a href="#" data-toggle="tooltip" data-placement="top" title="twitter">
+							<i class="fa fa-fw fa-twitter"></i>
+						</a>
+						<a href="#" data-toggle="tooltip" data-placement="top" title="google plus">
+							<i class="fa fa-fw fa-google-plus"></i>
+						</a>
+						<a href="#" data-toggle="tooltip" data-placement="top" title="rss">
+							<i class="fa fa-fw fa-rss"></i>
+						</a>
+					</div>
+					<!-- End socials -->
+					<!-- End footer-menu -->
+					<p class="copy">
+						Copyright &copy; 2017.Company name All rights reserved.<a href="{:url('@admin/login/index')}">管理员登录</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- End footer -->
+</div>
+<!-- End animsition -->
+<script src="__STATIC__/qianduan/js/jquery-1.12.4.min.js"></script>
+<script src="__STATIC__/qianduan/js/libs.js"></script>
+<!-- Custom -->
+<script src="__STATIC__/qianduan/js/main.js"></script>
+<script src="__STATIC__/qianduan/js/script.js"></script>
+</body>
+</html>
